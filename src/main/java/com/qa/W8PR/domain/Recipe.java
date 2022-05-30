@@ -1,7 +1,5 @@
 package com.qa.W8PR.domain;
 
-import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 //creating a table with spring. Doesn't need to be called, SpringApplication goes and hunts all of the springable stuff
 //and pops it in your tables.
-//Lombok used as proof of Lombok use. I used Lombok.
+//Lombok used as proof of Lombok use. I used Lombok. Lombok config file excludes this from testing.
 @Entity
 @Data
 @NoArgsConstructor
