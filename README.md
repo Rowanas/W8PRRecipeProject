@@ -31,8 +31,10 @@ I tested all of my core files. There are unit tests for my controller, domain, r
 * [Github](https://github.com/) - Repository management and integration with Jira for automatic Jira update
 * [Confluence](https://rowanatwork.atlassian.net/wiki/spaces/~62751f6c7dd556006afefebc/pages/458753/Week+8+Project+Risk+Matrix) - Additional pages for risk matrices and further documentation
 * [Mockito](https://site.mockito.org/) - Mocking dependencies for unit testing
-* [Junit](https://junit.org) - Testing
+* [Junit](https://junit.org/) - Testing
 * [MySQLWorkbench and Server](https://www.mysql.com/products/workbench/)
+* [Lombok](https://projectlombok.org/) - Boilerplate code reduction in POJOs
+* [PlantUML](http://www.plantuml.com/plantuml/uml/) - UML creation
 
 ## Authors
 
