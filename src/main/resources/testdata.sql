@@ -1,0 +1,1 @@
+INSERT INTO `recipe` (`recipe_name`, `ingredients`, `diet_friendly`) VALUES ('Eggs', 'egg', true);
