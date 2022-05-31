@@ -1,0 +1,61 @@
+.input-group.mb-3   {
+    /*padding set to percentage, so it retains
+    proportion when resized*/
+    margin: auto;
+    width: 70%;
+    padding: 1%;
+    border: 10px solid rebeccapurple;
+    border-radius: 20px;
+}
+.input-group-text    {
+    background-color: peachpuff;
+    border: 0px solid rebeccapurple;
+}
+
+.form-control    {
+        text-align:center;
+        background-color: peachpuff;
+        border: 0px solid rebeccapurple;
+}
+
+body   {
+    text-align: center;
+    align-self: center;
+    background-color: peachpuff;
+}
+
+#results   {
+    border: 0px solid black;
+    text-align: center;
+    align-self: center;
+}
+
+#viewdiv    {
+    border: 0px solid black;
+    text-align: center;
+    align-self: center;
+}
+
+#recipe_readout_div {
+    width: 50%;
+    float: right;
+}
+
+#input_div {
+    width: 50%;
+    float: left;
+}
+
+.hide {
+    display:none;
+}  
+
+.btn    {
+border-radius: 2rem;
+}
+
+.btn-success{
+border-width: 2px;
+border-color:green
+}
+

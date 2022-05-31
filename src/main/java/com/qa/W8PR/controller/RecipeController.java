@@ -29,7 +29,7 @@ public class RecipeController {
 // Temporary database for testing syntax
 //	private List<Recipe> recipes = new ArrayList<>();
 
-	@PostMapping("/post")
+	@PostMapping("/create")
 	public ResponseEntity<Recipe> create(@RequestBody Recipe recipe) {
 		return new ResponseEntity<Recipe>(service.create(recipe), HttpStatus.CREATED);
 	}
@@ -57,14 +57,14 @@ public class RecipeController {
 
 	@PutMapping("/update/{id}")
 	public ResponseEntity<Recipe> update(@PathVariable long id, @RequestBody Recipe recipe) {
-		return new ResponseEntity<Recipe>(service.create(recipe), HttpStatus.CREATED);
+		return new ResponseEntity<Recipe>(service.update(id, recipe), HttpStatus.OK);
 	}
 
 	// changed to boolean output to match delete service method.
 	// can do a ternary if
 	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<Boolean>delete(@PathVariable long id) {
-		return service.delete(id) ? new ResponseEntity<Boolean>(service.delete(id),HttpStatus.NO_CONTENT)
+		return service.delete(id) ? new ResponseEntity<Boolean>(HttpStatus.NO_CONTENT)
 				: new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 }

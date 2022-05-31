@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowan's Shopping List Generator by Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel= "stylesheet" href="./recipestyles.CSS">
+    <link rel="icon" type="image/x-icon" href="./screaming monkey.jpg">
+<!-- Adds a screaming monkey favicon as proof of learning, and to stop the "no favicon" error in console -->
+<!-- That error doesn't DO anything, but it's annoying, so I fixed it-->
+</head>
+
+<body>
+    <h1>Recipe Form</h1>
+    <h4>Hover over each field below for further information</h4>
+    <div id = "input_div">
+        <fieldset>
+            <div class="input-group mb-3" title="To delete or update a recipe, please fill in this box with the id of the recipe you would like to change">
+                <span class="input-group-text" >Recipe ID</span>
+                <input type="text" class="form-control" id="recipe_id_input">
+                <span class="input-group-text" >Recipe ID</span>
+            </div>
+            <div class="input-group mb-3" title="To create a new recipe, please fill in this box, Ingredients and Diet Friendly. To change this field for an existing recipe, just put in the recipe ID and fill this field">
+                <span class="input-group-text" >Recipe Name</span>
+                <input type="text" class="form-control" id="recipe_name_input">
+                <span class="input-group-text" >Recipe Name</span>
+            </div>
+            <div class="input-group mb-3"title="To create a new recipe, please fill in this box, Recipe Name and Diet Friendly. To change this field for an existing recipe, just put in the recipe ID and fill this field">
+                <span class="input-group-text">Ingredients</span>
+                <input type="text" class="form-control" id="ingredients_input">
+                <span class="input-group-text">Ingredients</span>  
+            </div>
+            <div class="input-group mb-3" title="To create a new recipe, please fill in this box, Recipe Name and Ingredients. To change this field for an existing recipe, just put in the recipe ID and fill this field">
+                <span class="input-group-text">Diet Friendly?</span>
+                    <select id="diet_friendly_input" class="form-select">
+                        <option>True</option>
+                        <option>False</option>
+                        <option>N/A</option>
+
+                    </select>
+
+                <span class="input-group-text">Diet Friendly?</span>
+            </div>
+        </fieldset>
+        </form>
+            <button id ="enter_recipe" class="btn btn-success hide " title="To create, leave the id field blank, but enter all other fields">Enter Recipe into Recipe Book</button>
+            <button id ="update_recipe" class="btn btn-primary hide " title="To update, provide an id and any other fields." >Update Recipe in Recipe Book</button>
+            <button id ="delete_recipe" class="btn btn-danger hide" title="To delete, provide an id and leave other fields blank.">Delete Recipe from Recipe Book</button>
+    </div>
+    <div id="viewdiv">
+        <p></p>
+        <button id ="view_all_recipes" class="btn btn-info">View all Recipes</button>
+    </div>
+
+    <div id="recipe_readout_div">
+      
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./recipelogic.js"></script>
+
+</body>
+
+</html>
