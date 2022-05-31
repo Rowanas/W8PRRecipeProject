@@ -4,6 +4,8 @@ let enterButton = document.querySelector("#enter_recipe")
 let updateButton = document.querySelector("#update_recipe");
 let deleteButton = document.querySelector("#delete_recipe");
 let viewAllButton = document.querySelector("#view_all_recipes");
+let readmeButton = document.querySelector("#view_readme")
+let infoButton = document.querySelector("#info_button")
 let recipeReadout = document.querySelector("#recipe_readout_div")
 let recipeID = document.querySelector("#recipe_id_input");
 let recipeName = document.querySelector("#recipe_name_input");
@@ -35,17 +37,27 @@ let revealButtons = () => {
     }
  }
 // used text content as suggested by Anoush. Other solutions did not work to separate text.
+let viewInfo = () =>   {
+    recipeReadout.innerHTML="";
+        const recipe_div = document.createElement("div");
+        recipe_div.innerHTML=`Good {insert time of day here} and welcome to Rowan's Week 8 Recipe Project<br/>`;
+        recipe_div.classList.add("bordered");
+        recipeReadout.appendChild(recipe_div);
+    }
+
 let displayResult = (data) =>   {
     recipeReadout.innerHTML="";
     for (let recipe of data) {
-        const recipeDiv = document.createElement("div");
-        recipeDiv.innerHTML=`Recipe ID: ${recipe.id}<br/> Recipe Name: ${recipe.recipeName}<br/> Ingredients Used: ${recipe.ingredients}<br/> Diet Friendly? ${recipe.dietFriendly}<br/>`;
-        recipeReadout.appendChild(recipeDiv);
+        const recipe_div = document.createElement("div");
+        recipe_div.innerHTML=`Recipe ID: ${recipe.id}<br/> Recipe Name: ${recipe.recipeName}<br/> Ingredients Used: ${recipe.ingredients}<br/> Diet Friendly? ${recipe.dietFriendly}<br/>`;
+        recipe_div.classList.add("bordered");
+        recipeReadout.appendChild(recipe_div);
     }
 }
 
 //API
 let createRecipe = () =>  {
+    displayResult;
 
     let recipe = {
         "recipeName":recipeName.value,
@@ -55,7 +67,6 @@ let createRecipe = () =>  {
 
     axios.post("http://localhost:8080/recipes/create/", recipe)
         .then((response) =>  {
-            console.log(recipe)
             viewAllRecipe();
         })
         .catch((error) => {
@@ -64,6 +75,7 @@ let createRecipe = () =>  {
     }
 
 let updateRecipe = () =>  {
+    displayResult;
 
     let recipe = {
         "recipeName":recipeName.value,
@@ -81,6 +93,7 @@ let updateRecipe = () =>  {
     }
 
 let viewAllRecipe = () =>  {
+
     axios.get("http://localhost:8080/recipes/getAll/")
         .then((response) => {
             displayResult(response.data);
@@ -122,6 +135,7 @@ enterButton.addEventListener("click", createRecipe);
 updateButton.addEventListener("click", updateRecipe);
 deleteButton.addEventListener("click", deleteRecipe);
 viewAllButton.addEventListener("click", viewAllRecipe);
+infoButton.addEventListener("click", viewInfo);
 recipeID.addEventListener("change", revealButtons);
 recipeName.addEventListener("change", revealButtons);
 ingredients.addEventListener("change", revealButtons);

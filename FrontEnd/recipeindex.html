@@ -15,6 +15,12 @@
 <body>
     <h1>Recipe Form</h1>
     <h4>Hover over each field below for further information</h4>
+    <button id ="info_button" class="btn btn-secondary">Information on using this web app</button>
+    <!-- More proof of learning, as well as a handier way to access my readme from within my application! -->
+    <form method="get" action="./readme.html" target="_blank">
+        <button id ="view_readme" class="btn btn-secondary">Readme</button>
+        </form>
+
     <div id = "input_div">
         <fieldset>
             <div class="input-group mb-3" title="To delete or update a recipe, please fill in this box with the id of the recipe you would like to change">
@@ -49,8 +55,7 @@
             <button id ="update_recipe" class="btn btn-primary hide " title="To update, provide an id and any other fields." >Update Recipe in Recipe Book</button>
             <button id ="delete_recipe" class="btn btn-danger hide" title="To delete, provide an id and leave other fields blank.">Delete Recipe from Recipe Book</button>
     </div>
-    <div id="viewdiv">
-        <p></p>
+    <div id="view_div">
         <button id ="view_all_recipes" class="btn btn-info">View all Recipes</button>
     </div>
 
