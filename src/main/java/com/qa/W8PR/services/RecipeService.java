@@ -11,8 +11,6 @@ import com.qa.W8PR.repositories.RecipeRepo;
 @Service
 public class RecipeService {
 
-	// Temporary database for testing syntax
-	//	private List<Recipe> recipes = new ArrayList<>();
 	
 	private RecipeRepo repo;
 	
