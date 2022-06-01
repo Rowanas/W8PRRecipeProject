@@ -39,17 +39,18 @@ public class RecipeController {
 		return new ResponseEntity<List<Recipe>>(service.getAll(), HttpStatus.OK);
 	}
 	
-	//currently wrong, will ask after lunch.
-	@GetMapping("/getRecipeByName/{recipeName}")
-	public ResponseEntity <Recipe> getRecipeByName(@PathVariable String recipeName) {
-		return new ResponseEntity<Recipe>(service.getRecipeByName(recipeName), HttpStatus.OK);
-	}
-	
-	@GetMapping("getDietFriendly/{dietFriendly}")
-	public ResponseEntity<List<Recipe>> getDietFriendly(@PathVariable boolean dietFriendly) {
-		return new ResponseEntity<List<Recipe>>(service.getDietFriendly(dietFriendly), HttpStatus.OK);
-	}
-//curently useless. I might do something interesting
+// I'm keeping these nubbins, but when I'm performing these functions in my webapp,
+//	I might just do them in javascript off a basic get request and display just what I want in JS. 
+//	@GetMapping("/getRecipeByName/{recipeName}")
+//	public ResponseEntity <Recipe> getRecipeByName(@PathVariable String recipeName) {
+//		return new ResponseEntity<Recipe>(service.getRecipeByName(recipeName), HttpStatus.OK);
+//	}
+//	
+//	@GetMapping("getDietFriendly/{dietFriendly}")
+//	public ResponseEntity<List<Recipe>> getDietFriendly(@PathVariable boolean dietFriendly) {
+//		return new ResponseEntity<List<Recipe>>(service.getDietFriendly(dietFriendly), HttpStatus.OK);
+//	}
+//	
 	@GetMapping("/getById/{id}")
 	public ResponseEntity<Recipe> getById(@PathVariable long id) {
 		return new ResponseEntity<Recipe>(service.getById(id), HttpStatus.OK);
@@ -68,51 +69,3 @@ public class RecipeController {
 				: new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 }
-
-////Create -> Post Request
-//	@PostMapping("/post")
-//	public Recipe create(@RequestBody Recipe newRecipe)	{
-//		recipes.add(newRecipe);
-//		return recipes.get(recipes.size()-1);
-//}
-//
-//	@GetMapping("/getby/{id}")
-//	public Recipe getById(@PathVariable long id)	{
-//		return recipes.get((int)id);
-//	}
-//
-////Update -> Put Request
-//	@PutMapping("/put/{id}")
-//	public Recipe update(@PathVariable long id, @RequestBody Recipe recipe)	{
-//		recipes.remove((int)id);
-//		recipes.add((int)id, recipe);
-//		return recipes.get((int)id);
-//}
-//	
-////Update -> Put Request with params
-//	@PutMapping("/updateWithParam")
-//	public Recipe updateWithParam(@PathParam("id") long id, @RequestBody Recipe recipe)	{
-//		recipes.remove((int)id);
-//		recipes.add((int)id, recipe);
-//		return recipes.get((int)id);
-//}
-//
-////Delete -> Delete Request
-//@DeleteMapping("/delete/{id}")
-//public Recipe delete(@PathVariable long id)	{
-//	return recipes.remove((int)id);
-//}
-//}
-
-//Possible for later? sends as array, will need new logic and frontend
-//[
-//{
-//    "recipeName":"spagbol","ingredients":"the most metal ingredient of all", "dietFriendly":"True"
-//},
-//{
-//    "recipeName":"carbonara","ingredients":"carbo, nara", "dietFriendly":"False"
-//},
-//{
-//    "recipeName":"prawn linguini","ingredients":"prawns, linguini, courgette, lolo cheese", "dietFriendly":"True"
-//}
-//]

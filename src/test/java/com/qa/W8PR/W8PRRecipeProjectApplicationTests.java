@@ -1,10 +1,10 @@
-package com.qa.W5PR;
+package com.qa.W8PR;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class W5PrRecipeProjectApplicationTests {
+class W8PRRecipeProjectApplicationTests {
 
 	@Test
 	void contextLoads() {

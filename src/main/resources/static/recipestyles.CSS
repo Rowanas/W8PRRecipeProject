@@ -38,11 +38,16 @@ body   {
     border: 0px solid rebeccapurple;
 }
 
-
 .form-control    {
         text-align:center;
         background-color: peachpuff;
         border: 0px solid rebeccapurple;
+}
+
+.form-select    {
+    text-align:center;
+    background-color: peachpuff;
+
 }
 
 #main_div    {
@@ -73,16 +78,20 @@ body   {
     background-color: peachpuff;
 
 }
-
+/* adds a scrollbar since this can get quite long  */
 #recipe_readout_div {
     width: 50%;
     float: right;
     padding: 1%;
+    max-height: 50vh;
+    overflow: auto;
+
 }
 
 #input_div {
     width: 50%;
     float: left;
+
 }
 
 .hide {
