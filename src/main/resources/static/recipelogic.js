@@ -96,8 +96,12 @@ let createInfo = () =>  {
     const updateInfoButton = document.createElement("button");
     const deleteInfoButton = document.createElement("button");
     const button_div = document.createElement("div")
-
-    recipe_div.innerHTML=`To create a new recipe, enter a recipe name, some ingredients (freetext for both) and select whether it is diet friendly or not from the Diet Friendly? dropdown. N/A is used for other functions. The moment you've put the details in, the button will appear below the input fields. Go ahead, try it out! When you've added an entry or two, navigate back here and try the blue button.`;
+    //reformatted to fit on a page.
+    recipe_div.innerHTML=`To create a new recipe, enter a recipe name,
+    some ingredients (freetext for both) and select whether it is diet friendly
+    or not from the Diet Friendly? dropdown. N/A is used for other functions.
+    The moment you've put the details in, the button will appear below the input fields.
+    Go ahead, try it out! When you've added an entry or two, navigate back here and try the blue button.`;
     recipe_div.classList.add("bordered");
     updateInfoButton.classList.add("btn");
     deleteInfoButton.classList.add("btn");
@@ -120,8 +124,18 @@ let createInfo = () =>  {
         const createInfoButton = document.createElement("button");
         const deleteInfoButton = document.createElement("button");
         const button_div = document.createElement("div")
-    
-        recipe_div.innerHTML=`To update an existing recipe, enter a recipe ID, a recipe name, some ingredients, and reselect whether it is diet friendly or not from the Diet Friendly? dropdown. N/A is used for other functions. If you want to keep something the same, just reenter what was already in the recipe. The moment you've put the details in, the button will appear below the input fields again, but with a twist! When you've modified an entry or two, navigate back here and try the red button. Please note, this uses a put method which we've been shown. Adding a patch method, which would result in more pleasing user functionality, is something we haven't learnt yet, and it would take a significant amount of additional coding, I fear.`;
+        //reformatted to fit on a page.
+        recipe_div.innerHTML=`To update an existing recipe,
+        enter a recipe ID, a recipe name, some ingredients,
+        and reselect whether it is diet friendly or not from the Diet Friendly? dropdown.
+        N/A is used for other functions. If you want to keep something the same,
+        just reenter what was already in the recipe. The moment you've put the details in,
+        the button will appear below the input fields again, but with a twist!
+        When you've modified an entry or two, navigate back here and try the red button.
+        Please note, this uses a put method which we've been shown.
+        Adding a patch method, which would result in more pleasing user functionality,
+        is something we haven't learnt yet, and it would take a significant
+        amount of additional coding, I fear.`;
         recipe_div.classList.add("bordered");
         createInfoButton.classList.add("btn");
         deleteInfoButton.classList.add("btn");
@@ -144,8 +158,14 @@ let createInfo = () =>  {
         const createInfoButton = document.createElement("button");
         const updateInfoButton = document.createElement("button");
         const button_div = document.createElement("div")
-    
-        recipe_div.innerHTML=`Deleting a recipe is easier than creating or updating. You simply need to enter a recipe ID and finally the moment of the N/A Diet Friendly option has come! The button appears again, but this time you can probably guess what it'll do.  now that you've seen all of the current functions of my application, why not view my (slightly) interactive html readme, or try swapping the background theme (if I got round to implementing that feature).`;
+    //reformatted to fit on a page.
+        recipe_div.innerHTML=`Deleting a recipe is easier than creating or updating.
+        You simply need to enter a recipe ID and finally the moment of the
+        N/A Diet Friendly option has come! The button appears again,
+        but this time you can probably guess what it'll do.
+         Now that you've seen all of the current functions of my application,
+         why not view my (slightly) interactive html readme, or try swapping the background theme
+         (if I got round to implementing that feature).`;
         recipe_div.classList.add("bordered");
         createInfoButton.classList.add("btn");
         updateInfoButton.classList.add("btn");
@@ -210,6 +230,16 @@ let updateRecipe = () =>  {
             console.error(error);
         })
     }
+    
+let deleteRecipe = () =>  {
+    axios.delete(`http://localhost:8080/recipes/delete/${recipeID.value}`)
+        .then((response) =>  {
+            viewAllRecipe();
+        })
+        .catch((error) => {
+            console.error(error);
+        })
+    }
 
     //called constantly to perform display result. Also clears inputs so you don't have to keep
     //clearing them manually.
@@ -237,16 +267,6 @@ let viewLastRecipe = () =>  {
             ingredients = "";
             dietFriendly = "";
             displayResult;
-        })
-        .catch((error) => {
-            console.error(error);
-        })
-    }
-
-let deleteRecipe = () =>  {
-    axios.delete(`http://localhost:8080/recipes/delete/${recipeID.value}`)
-        .then((response) =>  {
-            viewAllRecipe();
         })
         .catch((error) => {
             console.error(error);
