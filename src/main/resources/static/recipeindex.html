@@ -12,15 +12,21 @@
 <!-- That error doesn't DO anything, but it's annoying, so I fixed it-->
 </head>
 
-<body>
-    <h1>Recipe Form</h1>
-    <h4>Hover over each field below for further information</h4>
-    <button id ="info_button" class="btn btn-secondary">Information on using this web app</button>
-    <!-- More proof of learning, as well as a handier way to access my readme from within my application! -->
-    <form method="get" action="./readme.html" target="_blank">
-        <button id ="view_readme" class="btn btn-secondary">Readme</button>
+<body class="peachy">
+    <div id = "main_div">
+        <h1>Recipe Form</h1>
+        <h4>Hover over each field below for further information</h4>
+
+        <!-- More proof of learning, as well as a handier way to access my readme from within my application! -->
+        <button id ="theme_window" class="btn">Thematic</button>
+        <button id ="peach_window" class="btn">Easy-On-The-Eyes</button>
+        <button id ="info_button" class="btn btn-secondary">Information on using this web app</button>
+        <form method="get" action="./readme.html" target="_blank">
+            <button id ="view_readme" class="btn btn-secondary">Readme</button>
         </form>
 
+    </div>
+    <!-- My formatting for this project is a fair bit better, I feel. -->
     <div id = "input_div">
         <fieldset>
             <div class="input-group mb-3" title="To delete or update a recipe, please fill in this box with the id of the recipe you would like to change">
@@ -44,13 +50,10 @@
                         <option>True</option>
                         <option>False</option>
                         <option>N/A</option>
-
                     </select>
-
                 <span class="input-group-text">Diet Friendly?</span>
             </div>
         </fieldset>
-        </form>
             <button id ="enter_recipe" class="btn btn-success hide " title="To create, leave the id field blank, but enter all other fields">Enter Recipe into Recipe Book</button>
             <button id ="update_recipe" class="btn btn-primary hide " title="To update, provide an id and any other fields." >Update Recipe in Recipe Book</button>
             <button id ="delete_recipe" class="btn btn-danger hide" title="To delete, provide an id and leave other fields blank.">Delete Recipe from Recipe Book</button>

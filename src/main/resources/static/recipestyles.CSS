@@ -1,9 +1,34 @@
+body   {
+    text-align: center;
+    align-self: center;
+    background: peachpuff;
+    /* background-image: url("./recipe.jpg"); */
+}
+
+.peachy {
+    background: peachpuff;
+}
+
+.themey {
+    background-image: url("./recipe.jpg");
+}
+
+#theme_window   {
+    background: url("./recipe.jpg");
+    color: maroon;
+}
+
+#peach_window   {
+    background: goldenrod;
+    color: maroon;
+}
+
 .input-group.mb-3   {
     /*padding set to percentage, so it retains
     proportion when resized*/
     margin: auto;
     width: 70%;
-    padding: 1%;
+    background-color: peachpuff;
     border: 10px solid rebeccapurple;
     border-style: inset;
     border-radius: 20px;
@@ -13,15 +38,14 @@
     border: 0px solid rebeccapurple;
 }
 
+
 .form-control    {
         text-align:center;
         background-color: peachpuff;
         border: 0px solid rebeccapurple;
 }
 
-body   {
-    text-align: center;
-    align-self: center;
+#main_div    {
     background-color: peachpuff;
 }
 
@@ -29,12 +53,15 @@ body   {
     border: 0px solid black;
     text-align: center;
     align-self: center;
+    background-color: peachpuff;
+
 }
 
 #view_div    {
     border: 0px solid black;
     text-align: center;
     align-self: center;
+    
 }
 
 .bordered {
@@ -43,6 +70,8 @@ body   {
     border-radius: 20px;
     padding: 1%;
     margin-bottom: 3%;
+    background-color: peachpuff;
+
 }
 
 #recipe_readout_div {
