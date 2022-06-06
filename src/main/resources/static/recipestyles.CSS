@@ -2,15 +2,20 @@ body   {
     text-align: center;
     align-self: center;
     background: peachpuff;
-    /* background-image: url("./recipe.jpg"); */
 }
 
 .peachy {
     background: peachpuff;
 }
 
-.themey {
-    background-image: url("./recipe.jpg");
+.themey{
+    background: url("./recipe.jpg");
+    color: whitesmoke;
+    size: 100%;
+}
+
+.compensated    {
+    color: black;
 }
 
 #theme_window   {
@@ -48,10 +53,6 @@ body   {
     text-align:center;
     background-color: peachpuff;
 
-}
-
-#main_div    {
-    background-color: peachpuff;
 }
 
 #results   {

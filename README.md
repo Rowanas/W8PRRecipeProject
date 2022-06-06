@@ -1,15 +1,14 @@
-Coverage: 64.7%
 # Week 8 Recipe Project
 
-This is my week 8 solo project on the QA training course. It involved setting up a database with tables for customers, items and orders, and necessitated a go-between table, order_items to handle an items-orders many to many relationship. Code to produce a variety functions was needed through Java, and connections required to link the two.
+This is my week 8 solo project on the QA training course. It involved setting up a fullstack application using Java, Javascript, and HTML, using CSS to style the frontend. A database with a table was created to store persistent information, and an API to handle requests made from a web browser and return information. I chose to make a project that I felt, with a little additional work, could be useful to me personally, so I created an ingredients list by recipe.
 
 ## Getting Started
 
-I have compiled my code into a FatJar for your convenience. You should only need to open up the file wherever you have downloaded it, and double click on the .jar file.
+I have compiled my code into a FatJar for your convenience. You should only need to open up the file wherever you have downloaded it, and double click on the .jar file. Alternatively, you can run java -jar Recipes.jar from the top folder.
 
 ### Prerequisites
 
-You will require SQL Workbench to visualise the information in my sql-schema and sql-data files, though you can open these in your preferred IDE if you prefer. For testing, Maven will be required. gitBash required to build in bash or console.
+You will require SQL Workbench to visualise the information in my sql-schema and sql-data files, though you can open these in your preferred IDE if you prefer. For testing, Junit and Mockito will be required. gitBash required to build in bash or console.
 
 ### Building
 

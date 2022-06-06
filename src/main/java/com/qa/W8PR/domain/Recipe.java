@@ -23,9 +23,9 @@ public class Recipe {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //longwinded way of saying "autoincrement"
 	private long id;
 	
-	//may put "unique = true" again or even make it my primary key as a stretch goal
+	//may put "unique = true" again as a stretch goal
 	//with functionality to kick a user to check an existing recipe if they attempt to create
-	//another with the same name.
+	//another with the same name. Could do entirely front end though.
 	@Column(nullable = false)
 	private String recipeName; // recognises camelCase and split to become SQLable names
 	
@@ -41,4 +41,4 @@ public class Recipe {
 		this.ingredients = ingredients;
 		this.dietFriendly = dietFriendly;
 	}	
-	}
+}

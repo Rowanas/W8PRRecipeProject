@@ -22,11 +22,16 @@ let body = document.querySelector("body");
 let makePeach = () => {
     body.classList.add("peachy");
     body.classList.remove("themey");
+
+    recipeReadout.classList.remove("compensated");
+
 }
 
 let makeTheme = () => {
     body.classList.add("themey");
     body.classList.remove("peachy");
+
+    recipeReadout.classList.add("compensated");
 }
 
 let revealButtons = () => {
