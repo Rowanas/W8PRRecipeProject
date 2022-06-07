@@ -8,14 +8,14 @@ body   {
     background: peachpuff;
 }
 
+.compensated    {
+    color: black;
+}
+
 .themey{
     background: url("./recipe.jpg");
     color: whitesmoke;
     size: 100%;
-}
-
-.compensated    {
-    color: black;
 }
 
 #theme_window   {
