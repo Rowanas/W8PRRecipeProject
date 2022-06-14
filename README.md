@@ -38,6 +38,7 @@ I tested all of my core files. There are unit tests for my controller, domain, r
 ## Authors
 
 * **Rowan Baker** - *Project and additional resources* - [Rowanas](https://github.com/Rowanas)
+[Jira board] (https://rowanatwork.atlassian.net/jira/software/projects/W8PR/boards/2/roadmap)
 
 ## License
 
